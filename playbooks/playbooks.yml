@@ -1,0 +1,20 @@
+---
+- name: playbook
+  hosts: webserver
+  become: yes
+
+  tasks:
+
+    - name: crear grupo user
+      group:
+        name: user
+
+    - name: Crear usuarios  
+      action: user name={{ user }} group={{ group }}  password={{ passwd }} home={{ path }} state=present
+
+#esto seria en un rol
+#    - name: update 
+#      apt: update_cache=yes 
+
+#    - name: upgrade 
+#      apt: upgrade=dist 

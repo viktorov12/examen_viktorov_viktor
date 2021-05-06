@@ -1,0 +1,3 @@
+---
+    - name: copiar archivo
+      copy: src=/home/vagrant/examen_viktorov_viktor/{{fichero}}.txt dest=/tmp

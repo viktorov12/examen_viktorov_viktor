@@ -1,0 +1,8 @@
+---
+- name: playbook
+  hosts: webserver
+  become: yes
+
+  tasks:
+
+    - import_tasks: copiar-fichero.yml
